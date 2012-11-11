@@ -1,7 +1,7 @@
 package Dancer::Plugin::WebDAV;
 use strict;
 use warnings;
-our $VERSION = '0.0.2';
+our $VERSION = '0.0.3';
 
 use Dancer ':syntax';
 use Dancer::Exception ':all';
@@ -52,11 +52,19 @@ Dancer::Plugin::WebDAV provides the routes controllers to define routes for WebD
 Just like the routes controllers L<any|Dancer/any>, L<get/Dancer/get>, L<patch/Dancer/patch>,
 L<post|Dancer/post>, L<del|Dancer/del>, L<options|Dancer/options> and L<put|Dancer/put>.
 
+Please making sure your server implementation accepts HTTP methods from WebDAV. The bin/app.pl
+coming along with the Dancer app skeleton uses L<HTTP::Server::Simple> which has no support
+on WebDAV. L<Plack::Handler::Standalone>, the default handler of plackup, does support WebDAV.
+
 =head1 AUTHOR
 
 shelling E<lt>navyblueshellingford@gmail.comE<gt>
 
 =head1 SEE ALSO
+
+L<Dancer>
+
+L<HTTP::Server::Simple::PSGI>
 
 =head1 LICENSE
 
