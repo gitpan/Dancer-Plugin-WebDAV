@@ -26,4 +26,4 @@ requires:
 resources:
   license: http://opensource.org/licenses/mit-license.php
   repository: https://github.com/shelling/dancer-plugin-webdav
-version: 0.0.1
+version: 0.0.2
