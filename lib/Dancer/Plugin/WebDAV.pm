@@ -1,7 +1,7 @@
 package Dancer::Plugin::WebDAV;
 use strict;
 use warnings;
-our $VERSION = '0.0.4';
+our $VERSION = '0.0.5';
 
 use Dancer ':syntax';
 use Dancer::Exception ':all';
@@ -43,6 +43,26 @@ Dancer::Plugin::WebDAV - Defines routes for methods of HTTP WebDAV
     };
 
     mkcol '/anotherwhere/:param' => sub {
+        ...
+    };
+
+    proppatch '...' => sub {
+        ...
+    };
+
+    copy '...' => sub {
+        ...
+    };
+
+    move '...' => sub {
+        ...
+    };
+
+    lock '...' => sub {
+        ...
+    };
+
+    unlock '..' => sub {
         ...
     };
 
